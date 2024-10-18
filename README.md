@@ -14,6 +14,9 @@
     - [Installation Phase](#installation-phase)
     - [Command and Control Phase](#command-and-control-phase)
     - [Actions on Objective Phase](#actions-on-objective-phase)
+  - [Post Activity](#post-activity)
+    - [Rule Created](#rule-created)
+    - [Alert Generated](#alert-generated)
   - [Lessons Learned](#lessons-learned)
 
 
@@ -59,13 +62,16 @@ Persistent access to the victim machine.
 ![8 Kill Chain C2](/Images/8%20Kill%20Chain%20C2%20-2.PNG)
 
 ### Actions on Objective Phase
-The command "procdump -n lsass.exe -s lsass.dmp" was used on the victim machine. This command saves a snapshot as a file named lsass.dmp, which contains important details about the process, such as active threads and loaded modules, as well as sensitive information like security tokens and password hashes. This information is very useful for an attacker. The real-time feed shows the log but no detection rules on the EDR.
+The command "procdump -n lsass.exe -s lsass.dmp" was used on the victim machine. This command saves a snapshot as a file named lsass.dmp, which contains important details about the process, such as active threads and loaded modules, as well as sensitive information like security tokens and password hashes. This information is very useful for an attacker. The real-time feed shows the log but no detection rules on the EDR were generated.
 ![9 Kill Chain Actions on Objectives](/Images/9%20Kill%20Chain%20Actions%20on%20Objectives.PNG)
 
+## Post Activity
+### Rule Created
 A rule was created to alert when any process attempts to access lsass.exe. However, this rule is likely to produce a high volume of false positives due to frequent legitimate access by authorized applications.
 ![EDR Rule](/Images/10%20EDR%20Rule.PNG)
 
-An alert was reported.
+### Alert Generated    
+An alert was generated.
 ![Detection and Analysis NIST Incident Response Life Cycle 2](/Images/Detection%20and%20Analysis%20NIST%20Incident%20Response%20Life%20Cycle%202.PNG)
 
 ## Lessons Learned
