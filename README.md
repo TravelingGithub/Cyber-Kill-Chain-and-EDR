@@ -1,5 +1,22 @@
 # EDR-and-Cyber-Kill-Chain
 
+- [EDR-and-Cyber-Kill-Chain](#edr-and-cyber-kill-chain)
+  - [Project:](#project)
+  - [Setup](#setup)
+    - [Adversary - Ubuntu Server](#adversary---ubuntu-server)
+    - [Victim - Windows 11 Machine](#victim---windows-11-machine)
+    - [Windows Defender Antivirus Disabled](#windows-defender-antivirus-disabled)
+  - [Cyber Kill Chain Framework](#cyber-kill-chain-framework)
+    - [Reconnaissance Phase](#reconnaissance-phase)
+    - [Weaponization Phase](#weaponization-phase)
+    - [Delivery Phase](#delivery-phase)
+    - [Exploitation Phase](#exploitation-phase)
+    - [Installation Phase](#installation-phase)
+    - [Command and Control Phase](#command-and-control-phase)
+    - [Actions on Objective Phase](#actions-on-objective-phase)
+  - [Lessons Learned](#lessons-learned)
+
+
 ## Project: 
 The project features one adversary and one victim, utilizing Endpoint Detection and Response (EDR) technology and the Cyber Kill Chain framework for simulation presentation.
 
